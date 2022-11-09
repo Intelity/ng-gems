@@ -1,2 +1,2 @@
-# ng-gems
-GEMS platform on the latest angular
+# GEMS
+GEMS platform and sub apps on Angular 14
