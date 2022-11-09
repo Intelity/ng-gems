@@ -1,0 +1,84 @@
+/*Toggle Control*/
+//TODO: Make this scss
+.toggle-wrapper {
+  flex: 1 1 calc(100% / 3);
+  height: 30px;
+  display: flex;
+  align-items: normal;
+  justify-content: end;
+  overflow: hidden;
+  position: relative;
+}
+
+.toggle-wrapper * :before, .toggle-wrapper * :after {
+  content: '';
+  position: absolute;
+}
+
+
+.toggle {
+  position: relative;
+  display: inline-block;
+}
+
+label.toggle-item {
+  width: 48px;
+  background: #2e394d;
+  height: 24px;
+  display: inline-block;
+  border-radius: 12px;
+  position: relative;
+  transition: all .3s ease;
+  transform-origin: 20% center;
+  cursor: pointer;
+}
+
+.toggle label.toggle-item:before {
+  display: block;
+  width: 22px;
+  height: 22px;
+  top: 2px;
+  left: 2px;
+  border-radius: 50%;
+  background: #fff;
+  transition: .3s ease;
+}
+
+
+.transparent:before {
+  border: 3px solid #fff;
+  width: 48px;
+  height: 24px;
+  top: .3em;
+  left: .3em;
+}
+
+.transparent label {
+  height: 26px;
+}
+
+.psuedo-input + label, .psuedo-input:disabled + label {
+  background: #B0B9C8
+}
+
+.psuedo-input:disabled + label {
+  pointer-events: none;
+}
+
+.psuedo-input:checked + label {
+  background: var(--intelity-blue);
+}
+
+
+.psuedo-input:checked + label:before {
+  transform: translateX(22px);
+}
+
+.toggle input {
+  height: 22px;
+  left: 0;
+  opacity: 0;
+  position: absolute;
+  top: 0;
+  width: 22px;
+}
