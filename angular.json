@@ -12,7 +12,7 @@
       },
       "root": "projects/dashboard",
       "sourceRoot": "projects/dashboard/src",
-      "prefix": "app",
+      "prefix": "gems",
       "architect": {
         "build": {
           "builder": "@angular-devkit/build-angular:browser",
@@ -130,6 +130,37 @@
             "main": "projects/gems/toggle/src/test.ts",
             "tsConfig": "projects/gems/toggle/tsconfig.spec.json",
             "karmaConfig": "projects/gems/toggle/karma.conf.js"
+          }
+        }
+      }
+    },
+    "@gems/radio": {
+      "projectType": "library",
+      "root": "projects/gems/radio",
+      "sourceRoot": "projects/gems/radio/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/gems/radio/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gems/radio/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/gems/radio/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gems/radio/src/test.ts",
+            "tsConfig": "projects/gems/radio/tsconfig.spec.json",
+            "karmaConfig": "projects/gems/radio/karma.conf.js"
           }
         }
       }

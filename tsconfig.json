@@ -3,6 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@gems/radio": [
+        "dist/gems/radio"
+      ],
       "@gems/toggle": [
         "dist/gems/toggle"
       ]
