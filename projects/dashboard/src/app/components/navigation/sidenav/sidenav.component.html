@@ -11,18 +11,18 @@
         <img src="../../../assets/images/logo_collapsed.svg" />
       </div>
       <mat-divider></mat-divider>
-      <mat-nav-list>
+      <mat-nav-list class="nav-list">
         <a class="nav-link" mat-list-item routerLink="/guests">
           <mat-icon class="nav-icon" routerLinkActive="active-icon">
             <img src="../../../assets/images/guests.svg" />
           </mat-icon>
         </a>
-        <a class="nav-link" mat-list-item>
+        <a class="nav-link" mat-list-item routerLink="/requests">
           <mat-icon class="nav-icon" routerLinkActive="active-icon">
             <img src="../../../assets/images/request.svg" />
           </mat-icon>
         </a>
-        <a class="nav-link" mat-list-item>
+        <a class="nav-link" mat-list-item routerLink="/work-orders">
           <mat-icon class="nav-icon" routerLinkActive="active-icon">
             <img src="../../../assets/images/workorder.svg" />
           </mat-icon>
@@ -99,80 +99,86 @@
         <img src="../../../assets/images/logo.svg" />
       </div>
       <div class="affiliate">{{ affiliate.affiliateName }}</div>
+
       <mat-divider></mat-divider>
-      <mat-nav-list>
-        <a class="nav-link" mat-list-item>
-          <mat-icon class="nav-icon" routerLinkActive="active-icon">
+
+      <mat-nav-list class="nav-list">
+        <a class="nav-link" mat-list-item routerLink="/guests">
+          <mat-icon class="nav-icon">
             <img src="../../../assets/images/guests.svg" />
           </mat-icon>
-          <span>Guests</span>
+          <span class="link-text">Guests</span>
         </a>
-        <a class="nav-link" mat-list-item>
-          <mat-icon class="nav-icon" routerLinkActive="active-icon">
+        <a class="nav-link" mat-list-item routerLink="/requests">
+          <mat-icon class="nav-icon">
             <img src="../../../assets/images/request.svg" />
           </mat-icon>
-          <span>Requests</span>
+          <span class="link-text" routerLinkActive="active-link">Requests</span>
         </a>
-        <a class="nav-link" mat-list-item>
-          <mat-icon class="nav-icon" routerLinkActive="active-icon">
+        <a class="nav-link" mat-list-item routerLink="/work-orders">
+          <mat-icon class="nav-icon">
             <img src="../../../assets/images/workorder.svg" />
           </mat-icon>
-          <span>Work Orders</span>
+          <span class="link-text" routerLinkActive="active-link"
+            >Work Orders</span
+          >
         </a>
         <a class="nav-link" mat-list-item>
-          <mat-icon class="nav-icon" routerLinkActive="active-icon">
+          <mat-icon class="nav-icon">
             <img src="../../../assets/images/rooms.svg" />
           </mat-icon>
-          <span>Rooms</span>
+          <span routerLinkActive="active-link">Rooms</span>
         </a>
         <a class="nav-link" mat-list-item>
-          <mat-icon class="nav-icon" routerLinkActive="active-icon">
+          <mat-icon class="nav-icon">
             <img src="../../../assets/images/kilt.svg" />
           </mat-icon>
-          <span>Keyless</span>
+          <span class="link-text" routerLinkActive="active-link">Keyless</span>
         </a>
         <a class="nav-link" mat-list-item>
-          <mat-icon class="nav-icon" routerLinkActive="active-icon">
+          <mat-icon class="nav-icon">
             <img src="../../../assets/images/devices.svg" />
           </mat-icon>
-          <span>Tablets</span>
+          <span class="link-text" routerLinkActive="active-link"> Tablets</span>
         </a>
         <a class="nav-link" mat-list-item>
-          <mat-icon class="nav-icon" routerLinkActive="active-icon">
+          <mat-icon class="nav-icon">
             <img src="../../../assets/images/events.svg" />
           </mat-icon>
-          <span>Events</span>
+          <span class="link-text" routerLinkActive="active-link">Events</span>
         </a>
         <a class="nav-link" mat-list-item>
-          <mat-icon class="nav-icon" routerLinkActive="active-icon">
+          <mat-icon class="nav-icon">
             <img src="../../../assets/images/push_message.svg" />
           </mat-icon>
-          <span>Messages</span>
+          <span class="link-text" routerLinkActive="active-link">Messages</span>
         </a>
         <a class="nav-link" mat-list-item>
-          <mat-icon class="nav-icon" routerLinkActive="active-icon">
+          <mat-icon class="nav-icon">
             <img src="../../../assets/images/accounts.svg" />
           </mat-icon>
-          <span>User Management</span>
+          <span class="link-text" routerLinkActive="active-link"
+            >User Management</span
+          >
         </a>
         <a class="nav-link" mat-list-item>
-          <mat-icon class="nav-icon" routerLinkActive="active-icon">
+          <mat-icon class="nav-icon">
             <img src="../../../assets/images/reports.svg" />
           </mat-icon>
-          <span>Reports</span>
+          <span class="link-text" routerLinkActive="active-link">Reports</span>
         </a>
         <a class="nav-link" mat-list-item>
-          <mat-icon class="nav-icon" routerLinkActive="active-icon">
+          <mat-icon class="nav-icon">
             <img src="../../../assets/images/settings.svg" />
           </mat-icon>
-          <span>Settings</span>
+          <span class="link-text" routerLinkActive="active-link">Settings</span>
         </a>
         <mat-divider></mat-divider>
         <a class="nav-link" mat-list-item>
-          <mat-icon class="nav-icon" routerLinkActive="active-icon">
+          <mat-icon class="nav-icon">
             <img src="../../../assets/images/help.svg" />
           </mat-icon>
-          <span>help</span>
+          <span routerLinkActive="active-link">help</span>
         </a>
       </mat-nav-list>
       <div class="collapse" (click)="toggle()">
@@ -186,4 +192,10 @@
       </div>
     </div>
   </mat-sidenav>
+  <mat-sidenav-content
+    class="sidenav-content"
+    [ngClass]="{ 'content-expended': isSideNavOpened }"
+  >
+    <ng-content></ng-content>
+  </mat-sidenav-content>
 </mat-sidenav-container>

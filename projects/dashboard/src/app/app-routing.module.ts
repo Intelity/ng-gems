@@ -3,9 +3,30 @@ import { RouterModule, Routes } from "@angular/router";
 
 const routes: Routes = [
   {
-    path: "guests",
-    loadChildren: () =>
-      import("./components/guests/guests.module").then((m) => m.GuestsModule),
+    path: "",
+    children: [
+      {
+        path: "guests",
+        loadChildren: () =>
+          import("./components/guests/guests.module").then(
+            (m) => m.GuestsModule
+          ),
+      },
+      {
+        path: "requests",
+        loadChildren: () =>
+          import("./components/requests/requests.module").then(
+            (m) => m.RequestsModule
+          ),
+      },
+      {
+        path: "work-orders",
+        loadChildren: () =>
+          import("./components/work-orders/work-orders.module").then(
+            (m) => m.WorkOrdersModule
+          ),
+      },
+    ],
   },
 ];
 

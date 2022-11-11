@@ -53,6 +53,10 @@ a.nav-link {
   text-decoration: none;
 }
 
+.active {
+  background-color: red;
+}
+
 a.nav-link > * {
   display: flex;
 }
@@ -79,7 +83,7 @@ a.nav-link > * {
 
   &.show {
     left: 75px;
-  }
+}
 
   .expanded-sidenav {
     background: linear-gradient(180deg, #1663b1 0%, #00173a 80.11%);

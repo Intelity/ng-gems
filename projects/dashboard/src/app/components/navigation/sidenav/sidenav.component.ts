@@ -8,7 +8,7 @@ import { Affiliate, AffiliateService } from "../../../services/affiliate.service
   styleUrls: ["./sidenav.component.scss"],
 })
 export class SidenavComponent implements OnInit {
-  isSideNavOpened = true;
+  isSideNavOpened = false;
   affiliate!: Affiliate;
 
   constructor(private _affiliateService: AffiliateService) {}
