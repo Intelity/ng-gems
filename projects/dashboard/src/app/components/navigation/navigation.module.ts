@@ -13,10 +13,7 @@ import { SidenavComponent } from "./sidenav/sidenav.component";
   imports: [
     CommonModule,
     MaterialModule,
-    RouterModule,
-    GuestsModule,
-    RequestsModule,
-    WorkOrdersModule
+    RouterModule
   ],
   exports: [NavigationComponent, SidenavComponent],
 })

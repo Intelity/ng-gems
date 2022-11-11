@@ -26,6 +26,60 @@ const routes: Routes = [
             (m) => m.WorkOrdersModule
           ),
       },
+      {
+        path: "rooms",
+        loadChildren: () =>
+          import("./components/rooms/rooms.module").then((m) => m.RoomsModule),
+      },
+      {
+        path: "keyless",
+        loadChildren: () =>
+          import("./components/keyless/keyless.module").then(
+            (m) => m.KeylessModule
+          ),
+      },
+      {
+        path: "tablets",
+        loadChildren: () =>
+          import("./components/tablets/tablets.module").then(
+            (m) => m.TabletsModule
+          ),
+      },
+      {
+        path: "events",
+        loadChildren: () =>
+          import("./components/events/events.module").then(
+            (m) => m.EventsModule
+          ),
+      },
+      {
+        path: "messages",
+        loadChildren: () =>
+          import("./components/messages/messages.module").then(
+            (m) => m.MessagesModule
+          ),
+      },
+      {
+        path: "user-management",
+        loadChildren: () =>
+          import("./components/user-management/user-management.module").then(
+            (m) => m.UserManagementModule
+          ),
+      },
+      {
+        path: "reports",
+        loadChildren: () =>
+          import("./components/reports/reports.module").then(
+            (m) => m.ReportsModule
+          ),
+      },
+      {
+        path: "settings",
+        loadChildren: () =>
+          import("./components/settings/settings.module").then(
+            (m) => m.SettingsModule
+          ),
+      },
     ],
   },
 ];
