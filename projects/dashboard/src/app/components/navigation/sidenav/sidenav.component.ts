@@ -8,9 +8,7 @@ import { Affiliate, AffiliateService } from "../../../services/affiliate.service
   styleUrls: ["./sidenav.component.scss"],
 })
 export class SidenavComponent implements OnInit {
-  @Input() showNavigation = false;
-
-  isSideNavOpened = false;
+  isSideNavOpened = true;
   affiliate!: Affiliate;
 
   constructor(private _affiliateService: AffiliateService) {}
@@ -24,6 +22,5 @@ export class SidenavComponent implements OnInit {
 
   toggle() {
     this.isSideNavOpened = !this.isSideNavOpened;
-    console.log(this.isSideNavOpened);
   }
 }

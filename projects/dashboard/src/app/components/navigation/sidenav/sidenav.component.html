@@ -12,7 +12,7 @@
       </div>
       <mat-divider></mat-divider>
       <mat-nav-list>
-        <a class="nav-link" mat-list-item>
+        <a class="nav-link" mat-list-item routerLink="/guests">
           <mat-icon class="nav-icon" routerLinkActive="active-icon">
             <img src="../../../assets/images/guests.svg" />
           </mat-icon>
@@ -76,9 +76,7 @@
       </mat-nav-list>
       <div class="expand" (click)="toggle()">
         <mat-icon class="expand-arrow">
-          <img
-            src="../../../assets/images/open_sidebar.svg"
-          />
+          <img src="../../../assets/images/open_sidebar.svg" />
         </mat-icon>
       </div>
     </div>
@@ -100,7 +98,7 @@
       <div class="logo-container">
         <img src="../../../assets/images/logo.svg" />
       </div>
-      <div class="affiliate">{{affiliate.affiliateName}}</div>
+      <div class="affiliate">{{ affiliate.affiliateName }}</div>
       <mat-divider></mat-divider>
       <mat-nav-list>
         <a class="nav-link" mat-list-item>
