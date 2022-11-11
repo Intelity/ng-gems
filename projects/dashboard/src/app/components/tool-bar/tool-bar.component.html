@@ -5,7 +5,25 @@
     </div>
     <mat-menu #notifications="matMenu">
       <span>Ticket Status</span>
-      <div>TO DO STATUS LOGIC</div>
+      <mat-list>
+        <div>URGENT</div>
+        <mat-list-item *ngIf="lateServicesRequest.length"
+          >Late Service Request {{ lateServicesRequest.length }}</mat-list-item
+        >
+        <mat-divider></mat-divider>
+        <mat-list-item *ngIf="lateWorkOrders.length"
+          >Late Work Orders {{ lateWorkOrders.length }}</mat-list-item
+        >
+        <mat-divider></mat-divider>
+        <div>PENDING</div>
+        <mat-list-item *ngIf="pendingServicesRequest.length"
+          >Service Request {{ pendingServicesRequest.length }}</mat-list-item
+        >
+        <mat-divider></mat-divider>
+        <mat-list-item *ngIf="pendingWorkOrders.length"
+          >Work Orders {{ pendingWorkOrders.length }}</mat-list-item
+        >
+      </mat-list>
     </mat-menu>
     <div class="menu" mat-icon-button [matMenuTriggerFor]="menu">
       <div class="dot"></div>
