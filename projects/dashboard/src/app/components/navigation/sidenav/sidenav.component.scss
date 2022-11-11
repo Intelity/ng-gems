@@ -1,0 +1,91 @@
+.nav-container {
+  height: 100%;
+}
+
+.sidenav {
+  display: flex;
+  flex-direction: column;
+  justify-content: start;
+  background: #1663b1;
+  background: linear-gradient(180deg, #1663b1 0%, #00173a 80.11%);
+  height: 100%;
+}
+
+.logo-container {
+  padding-top: 60px;
+}
+
+.collapsed-logo-container {
+  padding-top: 60px;
+  padding-left:20px;
+}
+.affiliate {
+  color: #ffffff;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "SF PRO Display", sans-serif;
+  padding-top: 40px;
+}
+
+span {
+  color: #ffffff;
+  padding-left: 10px;
+  font-size: 16px;
+  font-weight: 400;
+  font-family: "SF PRO Display", sans-serif;
+  opacity: 0.75;
+}
+
+mat-icon {
+  color: #d9d9d9;
+}
+
+mat-divider {
+  background-color: #ffffff;
+  width: 175px;
+  margin-top: 15px;
+}
+
+a.nav-link {
+  margin-left: 0;
+  color: rgba(255, 255, 255, 0.75);
+  text-decoration: none;
+}
+
+a.nav-link > * {
+  display: flex;
+}
+
+.collapse, .expand {
+  position: absolute;
+  bottom: 15px;
+}
+
+.collapse-arrow {
+  margin-top: 6px;
+}
+
+.expand-arrow {
+  margin-top:6px;
+  margin-left:17px
+}
+
+.expanded-nav-container {
+  position: fixed;
+  top: 0;
+  height: 100%;
+  width: 100%;
+
+  &.show {
+    left: 75px;
+  }
+
+  .expanded-sidenav {
+    background: linear-gradient(180deg, #1663b1 0%, #00173a 80.11%);
+    padding-left: 15px;
+    width: 189px;
+    height: 100%;
+    width: 200px;
+  }
+}
