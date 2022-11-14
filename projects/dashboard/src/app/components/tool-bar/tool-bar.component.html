@@ -3,26 +3,37 @@
     <div class="bell" mat-icon-button [matMenuTriggerFor]="notifications">
       <mat-icon>notifications</mat-icon>
     </div>
-    <mat-menu #notifications="matMenu">
+    <div *ngIf="hasNotifications" class="notification-dot"></div>
+    <mat-menu #notifications="matMenu" class="notification-list">
       <span>Ticket Status</span>
       <mat-list>
-        <div>URGENT</div>
-        <mat-list-item *ngIf="lateServicesRequest.length"
-          >Late Service Request {{ lateServicesRequest.length }}</mat-list-item
-        >
+        <div class="urgent">
+          <div class="urgent-title">URGENT</div>
+          <mat-divider></mat-divider>
+          <mat-list-item *ngIf="lateServicesRequest.length" class="urgent-list">
+            <div>Late Service Request {{ lateServicesRequest.length }}</div>
+            <mat-icon>keyboard_arrow_right</mat-icon>
+          </mat-list-item>
+          <mat-divider></mat-divider>
+          <mat-list-item *ngIf="lateWorkOrders.length">
+            <div>Late Work Orders {{ lateWorkOrders.length }}</div>
+            <mat-icon>keyboard_arrow_right</mat-icon></mat-list-item
+          >
+        </div>
         <mat-divider></mat-divider>
-        <mat-list-item *ngIf="lateWorkOrders.length"
-          >Late Work Orders {{ lateWorkOrders.length }}</mat-list-item
-        >
-        <mat-divider></mat-divider>
-        <div>PENDING</div>
-        <mat-list-item *ngIf="pendingServicesRequest.length"
-          >Service Request {{ pendingServicesRequest.length }}</mat-list-item
-        >
-        <mat-divider></mat-divider>
-        <mat-list-item *ngIf="pendingWorkOrders.length"
-          >Work Orders {{ pendingWorkOrders.length }}</mat-list-item
-        >
+        <div class="pendig">
+          <div class="pending-title">PENDING</div>
+          <mat-divider></mat-divider>
+          <mat-list-item *ngIf="pendingServicesRequest.length">
+            <div>Service Request {{ pendingServicesRequest.length }}</div>
+            <mat-icon>keyboard_arrow_right</mat-icon></mat-list-item
+          >
+          <mat-divider></mat-divider>
+          <mat-list-item *ngIf="pendingWorkOrders.length">
+            <div>Work Orders {{ pendingWorkOrders.length }}</div>
+            <mat-icon>keyboard_arrow_right</mat-icon></mat-list-item
+          >
+        </div>
       </mat-list>
     </mat-menu>
     <div class="menu" mat-icon-button [matMenuTriggerFor]="menu">

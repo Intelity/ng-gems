@@ -20,6 +20,7 @@ export class ToolBarComponent implements OnInit {
   pendingServicesRequest: GemsNotification[] = [];
   pendingWorkOrders: GemsNotification[] = [];
 
+  hasNotifications = false;
   constructor(
     private _userService: UserService,
     private _notificationService: NotificationService
@@ -35,6 +36,11 @@ export class ToolBarComponent implements OnInit {
       .getNotifications()
       .pipe(first())
       .subscribe((notifications) => {
+        if (!notifications) {
+          return;
+        }
+
+        this.hasNotifications = notifications.length > 0;
         notifications.forEach((n) => {
           if (
             n.type === NotificationType.request &&

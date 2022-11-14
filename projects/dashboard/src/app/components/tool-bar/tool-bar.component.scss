@@ -59,3 +59,33 @@ span {
   top: 10px;
   right: 10px;
 }
+
+.notification-dot {
+  width: 8px;
+  height: 8px;
+  background: red;
+  top: 0;
+  right: 0;
+  border-radius: 50%;
+  position: absolute;
+  margin-right: 190px;
+}
+
+.urgent {
+  overflow: hidden;
+  background: rgba(238, 34, 34, 0.1);
+}
+
+.urgent-title {
+  color: red;
+}
+
+.pending-title {
+  color: blue;
+}
+
+.test { 
+    display: flex;
+    flex-direction: row;
+    justify-content: space-between;
+}
