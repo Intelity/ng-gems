@@ -3,7 +3,16 @@
 // The list of file replacements can be found in `angular.json`.
 
 export const environment = {
-  production: false
+    production: false,
+    gems_url: 'https://api.green.keyprdev.com',
+    chat_url: 'https://chat-token.green.keyprdev.com',
+    locale_url: 'https://translations.green.keyprdev.com/dashboard/translations/',
+    api_v3: 'https://api.green.keyprdev.com/v1',
+    kcsaccount_url: 'https://account.green.keyprdev.com',
+    app_token: 'Z5T62DWXB3W2MYPH',
+    notification_period: 5000,
+    intercom_app_id: 'o0iq46xv',
+    gtm_id: 'GTM-NFVXRKL'
 };
 
 /*

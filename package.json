@@ -3,7 +3,7 @@
   "version": "0.0.0",
   "scripts": {
     "ng": "ng",
-    "start": "ng serve --project dashboard",
+    "start": "ng serve --project dashboard --configuration=development",
     "build": "ng build",
     "build:libs": "rm -rf dist && npm run build @gems/types && npm run build @gems/radio && npm run build @gems/toggle",
     "watch": "ng build --watch --configuration development",
