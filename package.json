@@ -5,6 +5,7 @@
     "ng": "ng",
     "start": "ng serve --project dashboard",
     "build": "ng build",
+    "build:libs": "rm -rf dist && npm run build @gems/types && npm run build @gems/radio && npm run build @gems/toggle",
     "watch": "ng build --watch --configuration development",
     "test": "ng test"
   },

@@ -8,6 +8,9 @@
       ],
       "@gems/toggle": [
         "dist/gems/toggle"
+      ],
+      "@gems/types": [
+        "dist/gems/types"
       ]
     },
     "baseUrl": "./",
