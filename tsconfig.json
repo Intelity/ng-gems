@@ -3,6 +3,9 @@
   "compileOnSave": false,
   "compilerOptions": {
     "paths": {
+      "@gems/form": [
+        "dist/gems/form"
+      ],
       "@gems/radio": [
         "dist/gems/radio"
       ],

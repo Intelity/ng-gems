@@ -7,6 +7,14 @@ const routes: Routes = [
     {
         path: '',
         component: SettingsComponent
+    },
+    {
+        path: 'chat',
+        component: SettingsComponent
+    },
+    {
+        path: 'email-messaging',
+        component: SettingsComponent
     }
 ];
 

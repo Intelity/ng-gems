@@ -201,6 +201,37 @@
           }
         }
       }
+    },
+    "@gems/form": {
+      "projectType": "library",
+      "root": "projects/gems/form",
+      "sourceRoot": "projects/gems/form/src",
+      "prefix": "lib",
+      "architect": {
+        "build": {
+          "builder": "@angular-devkit/build-angular:ng-packagr",
+          "options": {
+            "project": "projects/gems/form/ng-package.json"
+          },
+          "configurations": {
+            "production": {
+              "tsConfig": "projects/gems/form/tsconfig.lib.prod.json"
+            },
+            "development": {
+              "tsConfig": "projects/gems/form/tsconfig.lib.json"
+            }
+          },
+          "defaultConfiguration": "production"
+        },
+        "test": {
+          "builder": "@angular-devkit/build-angular:karma",
+          "options": {
+            "main": "projects/gems/form/src/test.ts",
+            "tsConfig": "projects/gems/form/tsconfig.spec.json",
+            "karmaConfig": "projects/gems/form/karma.conf.js"
+          }
+        }
+      }
     }
   }
 }
