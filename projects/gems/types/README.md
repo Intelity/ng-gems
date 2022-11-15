@@ -27,7 +27,7 @@ Run `ng test types` to execute the unit tests via [Karma](https://karma-runner.g
 `@gems/types/form` can be extended on to any class, primarily used for forms that need to be nested inside other forms. 
 ```
 //Must be a const to pass into super() fn
-const example_form = new FormGroup({control: new FormControl('')}
+const example_form = new FormGroup({control: new FormControl('')});
 @Component({
   selector: 'app-nestable-form',
   templateUrl: './form.component.html',
