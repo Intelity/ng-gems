@@ -28,11 +28,11 @@ export class FormComponent extends BaseComponent implements ControlValueAccessor
     onTouched: any = () => {
     };
 
-    registerOnChange(fn) {
+    registerOnChange(fn:any) {
         this.onChange = fn;
     }
 
-    writeValue(value) {
+    writeValue(value:any) {
         if (value) {
             this.value = value;
         }
@@ -42,7 +42,7 @@ export class FormComponent extends BaseComponent implements ControlValueAccessor
         }
     }
 
-    registerOnTouched(fn) {
+    registerOnTouched(fn:any) {
         this.onTouched = fn;
     }
 
