@@ -48,7 +48,7 @@ const example_form = new FormGroup({control: new FormControl('')});
   ]
 })
 export class ExampleFormComponent extends FormComponent {
-
+// FormComponent already extends BaseComponent so theres no need to worry about unsubscribing.
 constructor() {
 //Pass in form instance and name of form
     super(example_form, 'example');
