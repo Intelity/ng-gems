@@ -1,0 +1,7 @@
+<?xml version='1.0' encoding='utf-8'?>
+<resources>
+    <string name="app_name">Gems</string>
+    <string name="title_activity_main">Gems</string>
+    <string name="package_name">com.gems.app</string>
+    <string name="custom_url_scheme">com.gems.app</string>
+</resources>
