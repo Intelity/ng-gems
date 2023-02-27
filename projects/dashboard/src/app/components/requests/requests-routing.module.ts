@@ -1,17 +1,23 @@
-import { CommonModule } from '@angular/common';
-import { NgModule } from '@angular/core';
-import { RouterModule, Routes } from '@angular/router';
-import { RequestsComponent } from './requests.component';
+import {CommonModule} from '@angular/common';
+import {NgModule} from '@angular/core';
+import {RouterModule, Routes} from '@angular/router';
+import {RequestsComponent} from "./requests.component";
 
 const routes: Routes = [
     {
         path: '',
-        component: RequestsComponent
-    }
+        component:RequestsComponent
+    },
+    {
+        path: ':id',
+        component:RequestsComponent
+    },
+
 ];
 
 @NgModule({
-    imports: [CommonModule, RouterModule.forChild(routes)],
+    imports: [CommonModule, RouterModule.forChild(routes), RequestsComponent],
     exports: [RouterModule]
 })
-export class RequestsRoutingModule {}
+export class RequestsRoutingModule {
+}

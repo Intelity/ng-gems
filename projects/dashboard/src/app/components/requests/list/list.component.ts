@@ -1,15 +1,19 @@
-import { Component, OnInit } from '@angular/core';
+import {Component, OnInit} from '@angular/core';
 
 @Component({
-  selector: 'gems-list',
-  templateUrl: './list.component.html',
-  styleUrls: ['./list.component.scss']
+    standalone: true,
+    selector: 'gems-list',
+    templateUrl: './list.component.html',
+    styleUrls: ['./list.component.scss'],
 })
 export class ListComponent implements OnInit {
+    currentRequests=[];
+    constructor() {
+    }
 
-  constructor() { }
-
-  ngOnInit(): void {
-  }
+    ngOnInit(): void {
+    }
+    goRequestDetails(row){}
+    advanceStatus(r, e, i, s){}
 
 }

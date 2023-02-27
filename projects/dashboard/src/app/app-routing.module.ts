@@ -14,9 +14,9 @@ const routes: Routes = [
       },
       {
         path: "requests",
-        loadChildren: () =>
-          import("./components/requests/requests.module").then(
-            (m) => m.RequestsModule
+        loadComponent: () =>
+          import("./components/requests/requests.component").then(
+            (m) => m.RequestsComponent
           ),
       },
       {

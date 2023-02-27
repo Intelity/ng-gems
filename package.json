@@ -4,6 +4,8 @@
   "scripts": {
     "ng": "ng",
     "start": "ng serve --project dashboard --configuration=development",
+    "startIos": "npx cap open ios",
+    "startAndroid": "npx cap open android",
     "build": "ng build",
     "build:libs": "rm -rf dist && ng build @gems/types && ng build @gems/radio && ng build @gems/toggle && ng build @gems/radio",
     "watch": "ng build --watch --configuration development",

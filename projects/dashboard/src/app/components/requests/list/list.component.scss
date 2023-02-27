@@ -1,0 +1,392 @@
+.gems-ticket-heading {
+  .tools {
+    margin-bottom: 15px;
+    > a {
+      display: inline-block;
+    }
+  }
+}
+.request-card-list {
+  border: none;
+  padding-top: 15px;
+}
+.service-card {
+  margin-bottom: 24px;
+  border: none;
+  box-shadow: 0 2px 10px 2px rgba(0, 0, 0, 0.10);
+  transition: all .2s ease;
+  box-sizing: border-box;
+  border-radius: 2px !important;
+
+  &:hover {
+    box-shadow: 0px 2px 18px 2px rgba(0, 0, 0, 0.15);
+  }
+
+  &:active {
+    box-shadow: 0px 2px 1px 2px rgba(0, 0, 0, 0.25);
+  }
+
+  &.active {
+    border: 2px solid cornflowerblue;
+  }
+
+  .card-footer {
+    display: grid;
+    text-align: right;
+    height: auto;
+    place-items: center;
+    justify-items: stretch;
+
+    button {
+      max-height: 35px;
+    }
+
+    .dropdown-menu {
+      text-align: left;
+    }
+
+    .age {
+      padding: 10px 0;
+    }
+  }
+
+  .inner-card {
+    padding: 15px;
+  }
+
+  &,
+  & .room {
+    cursor: pointer;
+  }
+  .room {
+    display: grid;
+    grid-template-columns: 25px auto;
+    grid-column-gap: 8px;
+    background-color: #F5F5F5;
+    height: 40px;
+    overflow: hidden;
+    padding: 0 15px;
+
+    i {
+      display: grid;
+      place-items: center;
+      font-size: 24px;
+      color: #428bca;
+      max-height: 40px;
+    }
+
+    .age {
+      font-size: 12px;
+      color: rgb(90, 96, 108);
+
+      &.severe {
+        color: #FCB41E;
+      }
+
+      &.critical {
+        color: #ee2222;
+      }
+    }
+
+    &.severe {
+      .age {
+        color: #FCB41E;
+      }
+    }
+
+    &.critical {
+      .age {
+        color: #ee2222;
+      }
+    }
+  }
+
+  .guest-name {
+    font-size: 12px;
+  }
+
+  .room-number {
+    font-size: 14px;
+    font-weight: bolder;
+    margin-right: 8px;
+  }
+
+  .status-label {
+    max-height: 40px;
+
+    &.severity {
+      text-transform: capitalize;
+
+      &.critical, .room.critical .label-black & {
+        background: #ee2222 !important;
+        color: #fff;
+        border: 1px solid #ee2222 !important;
+      }
+
+      &.severe, .room.severe .label-black & {
+        background: #FCB41E !important;
+        color: #fff;
+        border: 1px solid #FCB41E !important;
+      }
+    }
+  }
+
+  .room-details {
+    flex-grow: 1;
+    white-space: nowrap;
+  }
+
+  .status-details {
+    display: grid;
+    grid-column-gap: 8px;
+    grid-template-columns: auto auto auto;
+    white-space: nowrap;
+  }
+
+  .inner-card hr {
+    margin: 5px 0;
+  }
+
+  .service-details {
+    display: flex;
+    align-items: flex-end;
+    flex-wrap: wrap;
+
+    strong {
+      margin-right: 4px;
+    }
+  }
+}
+
+.service-details > div:first-of-type {
+  flex-grow: 1;
+  white-space: nowrap;
+
+  & + div {
+    display: flex;
+    white-space: nowrap;
+    align-self: center;
+  }
+}
+//Filters on mobile
+.mobile-filters {
+  margin-bottom: 15px;
+}
+
+.tab-row {
+  margin: 30px 0;
+}
+//Inputs and btns
+input.search-filter:focus {
+  border: 1px solid #e5e5e5;
+  border-right: none;
+}
+
+.input-group-addon.light {
+  background: #fff;
+  border: 1px solid #e5e5e5;
+  border-left: none;
+  border-top-right-radius: 5px !important;
+  border-bottom-right-radius: 5px !important;
+
+  i {
+    color: #c3c4c3;
+  }
+}
+
+.input-group.grid-input {
+  display: grid;
+  grid-template-columns: minmax(10%, 39px) auto minmax(10%, 40px);
+  overflow: hidden;
+  width: 100%;
+
+  input {
+    padding: 0 0 0 4px;
+    border-left: none;
+  }
+
+  .icon {
+    background: #fff;
+    border: 1px solid #e5e5e5;
+    border-right: none;
+    display: grid;
+    place-items: center;
+    padding: 0 4px 0 16px;
+    border-radius: 8px 0 0 8px !important;
+  }
+}
+
+.controls-bar {
+  .icon {
+    img {
+      image-rendering: -webkit-optimize-contrast;
+      image-rendering: crisp-edges;
+      padding: 0 !important;
+    }
+  }
+}
+
+.btn-black {
+  display: grid;
+  place-items: center;
+  height: 43px;
+  border: none;
+  background: #fff;
+  color: #5a606c;
+  border-radius: 10px !important;
+}
+
+//Controls and fitlers
+.label {
+  border-radius: 15px !important;
+  padding: 2px 5px;
+
+  &-black {
+    background-color: transparent;
+    border: 1px solid #5a606c;
+    font-size: 10px;
+    color: #5a606c;
+  }
+
+  &-red {
+    color: #fff;
+    background: #ee2222;
+  }
+
+  &-yellow {
+    background: rgb(252, 180, 30);
+    color: #fff;
+  }
+}
+
+.tasks {
+  & .task input {
+    display: inline-block;
+  }
+}
+
+.room {
+  & br {
+    display: none;
+  }
+}
+
+.controls-bar {
+  width: 100%;
+  display: grid;
+  position: relative;
+  grid-template-columns: 32% 26% auto;
+  background: rgb(241, 242, 242);
+  grid-column-gap: 24px;
+  padding: 0 24px;
+
+  & input, select {
+    color: #5A606C !important;
+  }
+
+  & .sort, & .filters {
+    display: grid;
+    grid-column-gap: 16px;
+    grid-template-columns: 40px 1fr;
+  }
+
+  & .filters {
+    grid-template-columns: 40px 1fr;
+    padding: 16px 0;
+  }
+
+  & .search {
+    display: grid;
+    place-items: center;
+  }
+
+  & .sort {
+    border-right: 1px solid #b0b3ba !important;
+    border-left: 1px solid #b0b3ba !important;
+    padding: 16px 24px;
+  }
+
+  & .search i, & .sort i, & .filters > i {
+    display: grid;
+    place-items: center;
+    width: 100%;
+  }
+
+  & .search i {
+    position: relative;
+    top: 25%;
+  }
+
+  .filters {
+    & .active-filters {
+      height: 40px;
+      width: 95%;
+      overflow-y: scroll;
+      overflow-x: hidden;
+
+      & > ul > li {
+        display:inline-block;
+      }
+    }
+  }
+}
+
+//Styles badges
+.styled-badge {
+  padding: 4px;
+  white-space: nowrap;
+  min-width: 10px;
+  color: #fff;
+  display: inline-block;
+  height: 24px;
+  font-size: 12px;
+  margin-right: 8px;
+  border-radius: 5px;
+
+  & span {
+    display: inline-block;
+  }
+
+  & i {
+    display: inline-block;
+    width: 10px;
+  }
+
+  &:last-of-type {
+    margin-right: 0;
+  }
+
+  &.blue {
+    background: rgb(19, 88, 157);
+  }
+
+  &.red {
+    background: #ee2222;
+  }
+}
+
+.styled-select {
+  width: 100%;
+  font-size: 15px;
+  color: #c3c4c3;
+  padding-left: 15px;
+  padding-right: 25px;
+  border: 1px solid #e5e5e5;
+  height: 43px;
+  appearance: none;
+  border-radius: 5px !important;
+  position: relative;
+  background: url(/assets/img/portlet-collapse-icon.png) 96% / 5% no-repeat #fff;
+
+  &:after {
+    position: absolute;
+    top: 5px;
+    right: 5px;
+    font-family: 'FontAwesome', monospace;
+    content: "\f55a";
+  }
+
+  &:focus {
+    outline: none;
+  }
+}
