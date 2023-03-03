@@ -106,3 +106,8 @@ dist
 
 # TernJS port file
 .tern-port
+
+# Firebase
+.firebase
+*-debug.log
+.runtimeconfig.json

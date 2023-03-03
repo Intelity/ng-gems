@@ -8,12 +8,15 @@ import {Component, OnInit} from '@angular/core';
 })
 export class ListComponent implements OnInit {
     currentRequests=[];
+    selectedRequest: any;
     constructor() {
     }
 
     ngOnInit(): void {
     }
     goRequestDetails(row){}
-    advanceStatus(r, e, i, s){}
+    advanceStatus(r, e, i, s){
+
+    }
 
 }

@@ -1,0 +1,14 @@
+{
+  "projects": {
+    "default": "ng-gems"
+  },
+  "targets": {
+    "ng-gems": {
+      "hosting": {
+        "dashboard": [
+          "ng-gems"
+        ]
+      }
+    }
+  }
+}

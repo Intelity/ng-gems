@@ -1,4 +1,15 @@
 export const environment = {
+  firebase: {
+    projectId: 'ng-gems',
+    appId: '1:816887947706:web:31c25e00206df121437d83',
+    databaseURL: 'https://ng-gems-default-rtdb.firebaseio.com',
+    storageBucket: 'ng-gems.appspot.com',
+    locationId: 'us-central',
+    apiKey: 'AIzaSyD4Gv88PqciXAwBQO6S5Y04dH5McOdod0k',
+    authDomain: 'ng-gems.firebaseapp.com',
+    messagingSenderId: '816887947706',
+    measurementId: 'G-RXNLSK1XZM',
+  },
   production: true,
   gems_url: '${GEMS_URL}',
   chat_url: '${CHAT_URL}',
